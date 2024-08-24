@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 import authRoutes from "../backend/routes/auth.routes.js"
+import cookieParser from 'cookie-parser'
 
 
 dotenv.config()
@@ -21,6 +22,10 @@ const PORT = process.env.PORT || 3000
 app.get("/", (req, res) => {
     res.send("Hello World")
 })
+
+// Middleware
+app.use(express.json())
+app.use(cookieParser())
 
 // Routes
 
