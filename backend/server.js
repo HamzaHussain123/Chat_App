@@ -1,9 +1,11 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
-import authRoutes from "../backend/routes/auth.routes.js"
 import cookieParser from 'cookie-parser'
 
+// importing Routes
+import authRoutes from "./routes/auth.routes.js"
+import messageRoute from "./routes/message.routes.js"
 
 dotenv.config()
 
@@ -30,6 +32,7 @@ app.use(cookieParser())
 // Routes
 
 app.use("/api/auth", authRoutes)
+app.use("/api/messages", messageRoute)
 
 
 app.listen(PORT, () => {
