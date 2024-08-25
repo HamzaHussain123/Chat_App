@@ -36,3 +36,17 @@ app.listen(PORT, () => {
     console.log(`Server is runnnig on port ${PORT}`);
 
 })
+
+//error handler
+// error middleware should be at the end of the file either server.js or index.js
+
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500
+    const message = err.message || "Internal Server Error"
+
+    return res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message
+    })
+})
