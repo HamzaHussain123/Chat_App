@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 // importing Routes
 import authRoutes from "./routes/auth.routes.js"
 import messageRoute from "./routes/message.routes.js"
+import userRoute from "./routes/user.routes.js"
 
 dotenv.config()
 
@@ -33,6 +34,7 @@ app.use(cookieParser())
 
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoute)
+app.use("/api/users", userRoute)
 
 
 app.listen(PORT, () => {
