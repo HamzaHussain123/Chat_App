@@ -31,13 +31,13 @@ const Login = () => {
                         <input type="password" placeholder='Enter Password' className='w-full input input-bordered h-12 px-4 rounded-lg border-2 border-gray-300 focus:border-blue-500 transition-transform duration-300 ease-out transform hover:scale-105 focus:scale-105 shadow-sm focus:outline-none' />
                     </div>
 
-                    <Link to={"/signup"} className='text-sm hover:underline text-blue-500 mt-1 inline-block'>
+                    <Link to={"/signup"} className='text-sm hover:underline text-blue-600 mt-1 inline-block'>
                         {"Don't"} have an account?
 
                     </Link>
 
                     <div>
-                        <button className='btn btn-block  mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold  rounded-lg transition-transform duration-300 ease-out transform hover:scale-105 shadow-lg'>
+                        <button className='btn btn-block  bg-blue-600 hover:bg-blue-700 text-white font-bold  rounded-lg transition-transform duration-300 ease-out transform hover:scale-105 shadow-lg'>
                             Login
                         </button>
                     </div>
