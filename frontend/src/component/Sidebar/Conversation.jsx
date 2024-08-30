@@ -1,0 +1,31 @@
+import React from 'react'
+import userIcon from "../../assets/profile.png"
+
+const Conversation = () => {
+    return (
+        <>
+            <div className='flex gap-4 items-center hover:bg-gradient-to-r from-purple-300 to-indigo-500 rounded-lg p-3 cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md'>
+                {/* Avatar Section */}
+                <div className='avatar online'>
+                    <div className='w-14 rounded-full border-2 border-white shadow-md'>
+                        <img src={userIcon} alt="User Avatar" />
+                    </div>
+                </div>
+
+                {/* Text Section */}
+                <div className='flex flex-col flex-1'>
+                    <div className="flex justify-between">
+                        <p className='font-bold text-gray-800 text-lg'>John Doe</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            {/* Divider */}
+            <div className="divider my-1 h-0.5 bg-gray-200"></div>
+        </>
+    )
+}
+
+export default Conversation;
