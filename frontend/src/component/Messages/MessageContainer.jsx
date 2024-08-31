@@ -13,7 +13,8 @@ const MessageContainer = () => {
             </header>
 
             {/* Messages component */}
-            <main className="flex-grow bg-gray-100 p-4 space-y-4 overflow-y-auto">
+            <main className="flex-grow bg-gray
+            -100 p-4 space-y-4 overflow-y-auto">
                 <Messages />
             </main>
 
