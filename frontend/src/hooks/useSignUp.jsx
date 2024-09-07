@@ -17,7 +17,7 @@ const handleInputErrors = ({ username, email, password, confirmPassword, gender 
 
 const useSignUp = () => {
     const [loading, setLoading] = useState(false)
-    const { setAuth } = useAuthContext()
+    const { setAuthUser } = useAuthContext()
 
     const signup = async ({ username, email, password, confirmPassword, gender }) => {
 
@@ -45,8 +45,11 @@ const useSignUp = () => {
             if (data.error) {
                 throw new Error(data.error)
             }
-            console.log(data);
+            // console.log(data);
 
+            localStorage.setItem("user", JSON.stringify(data))
+
+            setAuthUser(data)
 
         } catch (error) {
             toast.error(error.message)
