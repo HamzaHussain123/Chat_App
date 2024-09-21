@@ -39,6 +39,7 @@ const useSignUp = () => {
                     username, email, password, confirmPassword, gender
                 })
             })
+            console.log("This is the response which i got in fetch while signing up", res);
 
             const data = await res.json()
 
